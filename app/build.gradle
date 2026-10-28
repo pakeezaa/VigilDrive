@@ -1,11 +1,10 @@
-
 plugins {
     alias(libs.plugins.android.application)
 }
 
 android {
     namespace 'com.example.vigildrive'
-    compileSdk 34
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.example.vigildrive"
