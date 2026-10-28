@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/splash_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center" android:orientation="vertical">
+
+        <FrameLayout android:layout_width="200dp" android:layout_height="200dp">
+            <View android:id="@+id/ring1"
+                android:layout_width="150dp" android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pulse_ring" android:alpha="0" />
+            <View android:id="@+id/ring2"
+                android:layout_width="150dp" android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/pulse_ring" android:alpha="0" />
+            <ImageView android:id="@+id/eye"
+                android:layout_width="110dp" android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_eye"
+                android:contentDescription="VigilDrive eye logo" />
+            <View android:id="@+id/scanLine"
+                android:layout_width="96dp" android:layout_height="3dp"
+                android:layout_gravity="center"
+                android:background="@color/accent" android:alpha="0" />
+        </FrameLayout>
+
+        <TextView android:id="@+id/title"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:alpha="0"
+            android:text="VigilDrive" android:textColor="@color/white"
+            android:textSize="38sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tagline"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:alpha="0"
+            android:text="Stay alert. Stay safe." android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+</FrameLayout>

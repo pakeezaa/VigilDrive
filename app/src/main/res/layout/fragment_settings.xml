@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Alert Settings" android:textColor="@color/text_primary"
+            android:textSize="26sp" android:textStyle="bold" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swBeep"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="Beep alarm"
+            android:textColor="@color/text_primary" android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvVolume"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Beep volume: 80%"
+            android:textColor="@color/text_primary" android:textSize="18sp" />
+        <SeekBar
+            android:id="@+id/sbVolume"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:max="100" />
+
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Beep sound"
+            android:textColor="@color/text_primary" android:textSize="18sp" />
+        <RadioGroup
+            android:id="@+id/rgTone"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/rbSoft"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Soft beep" android:textColor="@color/text_primary" />
+            <RadioButton android:id="@+id/rbNormal"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Normal alert" android:textColor="@color/text_primary" />
+            <RadioButton android:id="@+id/rbLoud"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Loud alarm" android:textColor="@color/text_primary" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvAway"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Beep after looking away: 30 s"
+            android:textColor="@color/text_primary" android:textSize="18sp" />
+        <SeekBar
+            android:id="@+id/sbAway"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:max="50" />
+        <TextView
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Closing your eyes for 2 seconds always triggers the beep."
+            android:textColor="@color/text_secondary" android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="28dp" android:text="Test beep"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="10dp" android:text="Reset to defaults"
+            android:textColor="@color/primary" android:textSize="16sp"
+            app:strokeColor="@color/primary" />
+    </LinearLayout>
+</ScrollView>
